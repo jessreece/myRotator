@@ -1,0 +1,33 @@
+.mainPage {
+  height: 100vh;
+  display: block;
+  flex-grow: 1;
+}
+
+.recLearningHeader {
+  background-image: url("../public/recLearningImage.jpg");
+  background-position: bottom 25%;
+  background-size: cover;
+  opacity: 75%;
+}
+
+.recTeamHeader {
+  background-image: url("../public/recommendedTeamImage.jpg");
+  background-position: 10%;
+  background-size: cover;
+  opacity: 75%;
+}
+
+.profileHeader {
+  background-image: url("../public/profilePageImage.jpg");
+  background-size: cover;
+  height: 90vh;
+  opacity: 75%;
+}
+
+.allTeamHeader {
+  background-image: url("../public/allTeamImage.jpg");
+  background-position: bottom 25%;
+  background-size: cover;
+  opacity: 75%;
+}

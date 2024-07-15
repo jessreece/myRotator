@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres
+    restart: on-failure
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d:ro
+    ports:
+      - 5432:5432
+    shm_size: 128mb
+    user: postgres
+
+  webapp:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: postgres
+      PGHOST: db 
+    ports:
+      - 3000:3000
